@@ -33,7 +33,7 @@ describe('Avatax Transactions', () => {
         });
 
         it('should create a new transaction', () => {
-            return client.createTransaction(transactionRequest)
+            return client.createTransaction({ model: transactionRequest })
                 .then(actualResponse => {
                     expect(actualResponse).toEqual(transactionResponse);
                 });
